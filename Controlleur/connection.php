@@ -12,7 +12,7 @@ if ($result == 0) {
     $response = ["message" => "success"]; 
     echo(json_encode($response));
 } else if($result == 1){
-    $response = ["message" => "le compte n'existe pas"];
+    $response = ["message" => "Email incorrect"];
     echo(json_encode($response));
 } else if($result == 2){
    $response = ["message" => "Mot de passe incorrect"];
