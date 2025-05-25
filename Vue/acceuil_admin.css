@@ -1,0 +1,161 @@
+/* Copié depuis acceuil.css */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Montserrat', sans-serif;
+}
+
+body {
+  overflow-x: hidden;
+  background: #fff;
+}
+
+header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background-color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+  z-index: 10;
+}
+
+nav {
+  position: relative;
+}
+
+nav ul {
+  display: flex;
+  list-style: none;
+  gap: 2rem;
+}
+
+nav a {
+  text-decoration: none;
+  color: black;
+  font-weight: 500;
+}
+
+nav ul li a {
+  color: #e30613;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.logo {
+  height: 60px; 
+  width: auto;
+}
+
+footer {
+  background-color: #fdf7f0;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  font-size: 0.95rem;
+  color: #333;
+  text-align: center;
+}
+
+footer .contact-info {
+  margin-top: 1rem;
+  line-height: 1.6;
+}
+
+.burger {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+  gap: 5px;
+}
+
+.burger div {
+  width: 25px;
+  height: 3px;
+  background-color: black;
+}
+
+@media (max-width: 1024px) {
+  header {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 1rem;
+  }
+
+  nav ul {
+    flex-direction: column;
+    gap: 1rem;
+    display: none;
+    background: white;
+    width: 100%;
+    padding: 1rem;
+  }
+
+  nav ul.active {
+    display: flex;
+  }
+
+  .burger {
+    display: flex;
+  }
+
+  footer {
+    padding: 1.5rem;
+  }
+}
+
+/* -------- Styles pour la page admin -------- */
+
+.admin-content {
+  padding: 8rem 2rem 4rem;
+  text-align: center;
+}
+
+.welcome {
+  text-align: left;
+  font-size: 2.5rem;
+  color: #e30613;
+  margin-bottom: 2rem;
+}
+
+.table-section {
+  margin-bottom: 3rem;
+}
+
+.table-section table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 1rem 0;
+}
+
+.table-section th,
+.table-section td {
+  border: 1px solid #ccc;
+  padding: 1rem;
+  text-align: left;
+}
+
+.add-btn, .delete-btn {
+  margin-top: 1rem;
+  padding: 0.6rem 1.2rem;
+  background-color: #e30613;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.delete-btn {
+  background-color: #999;
+}
+
+.add-btn:hover, .delete-btn:hover {
+  opacity: 0.9;
+}
