@@ -34,12 +34,13 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
 recup_data();
+
 document.getElementById('add-btn-past').addEventListener('click', () => {
-    window.location.href = 'ajout_past_event.html';
+    window.location.href = '../Vue/ajout_past_event.html';
   });
 
-document.getElementById('future-event').addEventListener('click', () => {
-    window.location.href = 'ajout_ev_a_venir.html';
+document.getElementById('add-btn-future').addEventListener('click', () => {
+    window.location.href = '../Vue/ajout_ev_a_venir.html';
   });
 
 });
