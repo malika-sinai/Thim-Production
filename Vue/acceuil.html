@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>home</title>
+  <link rel="stylesheet" href="acceuil.css" />
+</head>
+<body>
+  <header>
+  <img src="../src/logo_TM.jpeg" alt="Logo de Thim Production" class="logo" />
+    <!-- Burger menu -->
+    <div class="burger" onclick="toggleMenu()">
+      <div></div>
+      <div></div>
+      <div></div>
+    </div>
+    
+    <nav>
+      <ul>
+        <li><a href="acceuil.html">Accueil</a></li>
+        <li><a href="description.html">À propos</a></li>
+        <li><a href="past_event.html">Evènement passé</a></li>
+        <li><a href="location_sono.html">Location sono</a></li>
+        <li><a href="contact.html">Nous contacter</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <h1>Thim Production</h1>
+   <p>Parce qu’un grand spectacle mérite une grande visibilité, nous connectons les talents au public avec passion, stratégie et impact</p>
+  </section>
+
+  <section class="events">
+  <h2>Évènements à venir</h2>
+  <div class="event-list">
+    <article class="event">
+      <img src="../src/flyers_didi.jpeg" alt="Flyer Évènement 1" />
+      <h3>Concert de Didi B à paris </h3>
+      <button onclick="location.href='#'">En savoir plus</button>
+    </article>
+    <article class="event">
+      <img src="../src/flyers_himra.jpg" alt="Flyer Évènement 2" />
+      <h3>Concert d'Himra à paris </h3>
+      <button onclick="location.href='#'">En savoir plus</button>
+    </article>
+    <!-- Ajouter d'autres événements ici -->
+  </div>
+</section>
+  <footer>
+    <div class="contact-info">
+      📍 Paris, France <br>
+      📞 +33 6 79 68 38 63 <br>
+      ✉️ contact@monsite.ci
+    </div>
+  </footer>
+
+  <script>
+    function toggleMenu() {
+      document.querySelector('nav ul').classList.toggle('active');
+    }
+  </script>
+  <script>
+  function isInViewport(element) {
+    const rect = element.getBoundingClientRect();
+    return (
+      rect.top <= (window.innerHeight || document.documentElement.clientHeight) * 0.9
+    );
+  }
+
+  function handleScrollAnimation() {
+    const events = document.querySelectorAll('.event');
+    events.forEach(event => {
+      if (isInViewport(event)) {
+        event.classList.add('visible');
+      }
+    });
+  }
+
+  window.addEventListener('scroll', handleScrollAnimation);
+  window.addEventListener('load', handleScrollAnimation);
+</script>
+
+</body>
+</html>
