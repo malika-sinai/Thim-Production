@@ -65,5 +65,18 @@ nav ul li a {
   padding: 5px;
 }
 
+.micro, .micro1, .mixage {
+  display: inline-block;
+  vertical-align: top;
+  margin-right: 10px; /* espace entre les images */
+  margin-top: 30px; /* descend les images vers le bas */
+}
+
+.micro img,
+.micro1 img,
+.mixage img {
+  width: 470px;
+  height: 330px;
+}
 
 
