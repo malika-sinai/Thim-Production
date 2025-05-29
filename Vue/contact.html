@@ -23,11 +23,14 @@
     <div class="contact-form">
             <h1>Contactez-nous</h1>
             <form action="/submit_contact" method="post">
-                <label for="name">Nom:</label>
+                <label for="name">Nom complet:</label>
                 <input type="text" id="name" name="name" required>
                 
                 <label for="email">Email:</label>
                 <input type="email" id="email" name="email"  required>
+
+                <label for="numero">Numéro de téléphone:</label>
+                <input type="tel" id="numero" name="numero" required>
                 
                 <label for="message">Message:</label>
                 <textarea id="message" name="message" rows="5" required></textarea>
