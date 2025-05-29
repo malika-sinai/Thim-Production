@@ -8,14 +8,12 @@
 </head>
 <body>
   <header>
-  <img src="../src/logo_TM.jpeg" alt="Logo de Thim Production" class="logo" />
-    <!-- Burger menu -->
+    <img src="../src/logo_TM.jpeg" alt="Logo de Thim Production" class="logo" />
     <div class="burger" onclick="toggleMenu()">
       <div></div>
       <div></div>
       <div></div>
     </div>
-    
     <nav>
       <ul>
         <li><a href="acceuil.html">Accueil</a></li>
@@ -26,32 +24,26 @@
       </ul>
     </nav>
   </header>
-
-  <section class="hero">
-    <h1>Thim Production</h1>
-   <p>Parce qu’un grand spectacle mérite une grande visibilité, nous connectons les talents au public avec passion, stratégie et impact</p>
-  </section>
-
-  <section class="events">
-  <h2>Évènements à venir</h2>
-  <div class="event-list">
-    <article class="event">
-      <img src="../src/flyers_didi.jpeg" alt="Flyer Évènement 1" />
-      <h3>Concert de Didi B à paris </h3>
-      <button onclick="location.href='#'">En savoir plus</button>
-    </article>
-    <article class="event">
-      <img src="../src/flyers_himra.jpg" alt="Flyer Évènement 2" />
-      <h3>Concert d'Himra à paris </h3>
-      <button onclick="location.href='#'">En savoir plus</button>
-    </article>
-    <article class="event">
-      <img src="../src/oiseau_rare.jpeg" alt="Flyer Évènement 3" />
-      <h3>Concert de l'oiseau rare à paris </h3>
-      <button onclick="location.href='#'">En savoir plus</button>
-    </article>
+  <div class="slider">
+    <div class="slides">
+      <div class="slide active">
+        <img src="../src/Oiseau_rare_vertical.jpg" alt="Événement 2">
+        <div class="slide-caption">
+          <h2>L'oiseau Rare au CASINO DE PARIS le 06 Juillet 2025</h2>
+          <a href="#" class="btn-ticket">Ticket à partir de 25 €</a>
+        </div>
+      </div>
+    </div>
+    <button class="nav prev">&#10094;</button>
+    <button class="nav next">&#10095;</button>
+  </div>
+  <section class="hero-section">
+  <div class="hero-content">
+    <h1 class="hero-title">THIM PRODUCTION</h1>
+    <p class="hero-subtitle">Créer des expériences inoubliables à chaque événement</p>
   </div>
 </section>
+
   <footer>
     <div class="contact-info">
       📍 Paris, France <br>
@@ -61,29 +53,32 @@
   </footer>
 
   <script>
-    function toggleMenu() {
-      document.querySelector('nav ul').classList.toggle('active');
-    }
-  </script>
-  <script>
-  function isInViewport(element) {
-    const rect = element.getBoundingClientRect();
-    return (
-      rect.top <= (window.innerHeight || document.documentElement.clientHeight) * 0.9
-    );
+  const slidesContainer = document.querySelector('.slides');
+  const slides = document.querySelectorAll('.slide');
+  const nextBtn = document.querySelector('.next');
+  const prevBtn = document.querySelector('.prev');
+  let index = 0;
+  const totalSlides = slides.length;
+
+  function updateSlidePosition() {
+    slidesContainer.style.transform = `translateX(-${index * 100}%)`;
   }
 
-  function handleScrollAnimation() {
-    const events = document.querySelectorAll('.event');
-    events.forEach(event => {
-      if (isInViewport(event)) {
-        event.classList.add('visible');
-      }
-    });
+  function showNextSlide() {
+    index = (index + 1) % totalSlides;
+    updateSlidePosition();
   }
 
-  window.addEventListener('scroll', handleScrollAnimation);
-  window.addEventListener('load', handleScrollAnimation);
+  function showPrevSlide() {
+    index = (index - 1 + totalSlides) % totalSlides;
+    updateSlidePosition();
+  }
+
+  nextBtn.addEventListener('click', showNextSlide);
+  prevBtn.addEventListener('click', showPrevSlide);
+
+  // ⏱️ Auto défilement toutes les 5 secondes
+  setInterval(showNextSlide, 3000);
 </script>
 
 </body>
