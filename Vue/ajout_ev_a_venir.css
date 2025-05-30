@@ -1,0 +1,213 @@
+/* Copié depuis acceuil.css */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Montserrat', sans-serif;
+}
+
+body {
+  overflow-x: hidden;
+  background:white;
+  /*background-image: url("../src/concert.jpg");*/
+}
+
+header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background-color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+  z-index: 10;
+}
+
+nav {
+  position: relative;
+}
+
+nav ul {
+  display: flex;
+  list-style: none;
+  gap: 2rem;
+}
+
+nav a {
+  text-decoration: none;
+  color: black;
+  font-weight: 500;
+}
+
+nav ul li a {
+  color: #e30613;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.logo {
+  height: 60px; 
+  width: auto;
+}
+
+footer {
+  background-color:white;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  font-size: 0.95rem;
+  color: #333;
+  text-align: center;
+}
+
+footer .contact-info {
+  margin-top: 1rem;
+  line-height: 1.6;
+}
+
+.burger {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+  gap: 5px;
+}
+
+.burger div {
+  width: 25px;
+  height: 3px;
+  background-color: black;
+}
+
+@media (max-width: 1024px) {
+  header {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 1rem;
+  }
+
+  nav ul {
+    flex-direction: column;
+    gap: 1rem;
+    display: none;
+    background: white;
+    width: 100%;
+    padding: 1rem;
+  }
+
+  nav ul.active {
+    display: flex;
+  }
+
+  .burger {
+    display: flex;
+  }
+
+  footer {
+    padding: 1.5rem;
+  }
+}
+
+.form-container {
+  background-color: white;
+  border: 2px solid #e50914;
+  border-radius: 10px;
+  padding: 30px;
+  max-width: 500px;
+  margin: 100px auto 0 auto; /* top 100px, horizontal centré */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: calc(100vh - 100px);
+}
+h1 {
+  text-align: center; 
+  color: #e50914;
+  margin-bottom: 20px;
+  width: 100%; /* pour que le texte prenne toute la largeur du container */
+
+}
+
+label {
+  display: block;
+  margin-top: 15px;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+input,
+textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid black;
+  border-radius: 5px;
+  background-color:white;
+  color:black;
+}
+
+input[type="file"] {
+  padding: 5px;
+  background-color: white;
+}
+
+button {
+  margin-top: 20px;
+  width: 100%;
+  padding: 12px;
+  background-color: #e50914;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+button:hover {
+  background-color: #b0060f;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+
+/* 🔁 Responsive Design */
+@media (max-width: 1024px) {
+  .form-container {
+    padding: 20px;
+  }
+
+  h1 {
+    font-size: 20px;
+  }
+
+  input,
+  textarea,
+  button {
+    font-size: 15px;
+  }
+}
+
+@media (max-width: 1024px) {
+  .form-container {
+    max-width: 90%;
+    padding: 20px;
+    margin-top: 80px; /* un peu moins sur petit écran */
+  }
+}
+
+p {
+  font-size: 12px;     
+  line-height: 1.2;     
+  margin: 5px 0;        
+  padding: 0;        
+}
+
+  .input-error {
+  border: 2px solid red !important;
+  outline: none !important;
+}

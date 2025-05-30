@@ -8,14 +8,12 @@
 </head>
 <body>
   <header>
-  <img src="../src/logo_TM.jpeg" alt="Logo de Thim Production" class="logo" />
-    <!-- Burger menu -->
+    <img src="../src/logo_TM.jpeg" alt="Logo de Thim Production" class="logo" />
     <div class="burger" onclick="toggleMenu()">
       <div></div>
       <div></div>
       <div></div>
     </div>
-    
     <nav>
       <ul>
         <li><a href="acceuil.html">Accueil</a></li>
@@ -26,29 +24,46 @@
       </ul>
     </nav>
   </header>
-
-  <section class="hero">
-    <h1>Thim Production</h1>
-   <p>Parce qu’un grand spectacle mérite une grande visibilité, nous connectons les talents au public avec passion, stratégie et impact</p>
-  </section>
-
-  <section class="events">
-  <h2>Évènements à venir</h2>
+  <div class="slider">
+    <div class="slides">
+      <div class="slide active">
+        <img src="../src/oiseau_rare.jpeg" alt="Événement 1">
+        <div class="slide-caption">
+          <h2>L'oiseau Rare au CASINO DE PARIS le 06 Juillet 2025</h2>
+          <a href="#" class="btn-ticket">Ticket à partir de 25 €</a>
+        </div>
+      </div>
+       <div class="slide active">
+        <img src="../src/roseline.jpg" alt="Événement 2">
+        <div class="slide-caption">
+          <h2>Roseline LAYO à paris</h2>
+          <a href="#" class="btn-ticket">Ticket à partir de 25 €</a>
+        </div>
+      </div>
+    </div>
+    <button class="nav prev">&#10094;</button>
+    <button class="nav next">&#10095;</button>
+  </div>
+  <section class="hero-section">
+  <div class="hero-content">
+    <h1 class="hero-title">THIM PRODUCTION</h1>
+    <p class="hero-subtitle">Créer des expériences inoubliables à chaque événement</p>
+  </div>
+</section>
+<section class="events">
+  <h2>Nos Evènements</h2>
   <div class="event-list">
     <article class="event">
-      <img src="../src/flyers_didi.jpeg" alt="Flyer Évènement 1" />
-      <h3>Concert de Didi B à paris </h3>
-      <button onclick="location.href='#'">En savoir plus</button>
+      <img src="../src/team_paya_sold_out.jpg" alt="Flyer Évènement 1" />
+      <h3> Team PAYA </h3>
     </article>
     <article class="event">
-      <img src="../src/flyers_himra.jpg" alt="Flyer Évènement 2" />
-      <h3>Concert d'Himra à paris </h3>
-      <button onclick="location.href='#'">En savoir plus</button>
+      <img src="../src/roseline_sold_out.jpg" alt="Flyer Évènement 2" />
+      <h3>Roseline LAYO </h3>
     </article>
     <article class="event">
       <img src="../src/oiseau_rare.jpeg" alt="Flyer Évènement 3" />
-      <h3>Concert de l'oiseau rare à paris </h3>
-      <button onclick="location.href='#'">En savoir plus</button>
+      <h3>l'oiseau Rare </h3>
     </article>
   </div>
 </section>
@@ -59,32 +74,6 @@
       ✉️ contact@monsite.ci
     </div>
   </footer>
-
-  <script>
-    function toggleMenu() {
-      document.querySelector('nav ul').classList.toggle('active');
-    }
-  </script>
-  <script>
-  function isInViewport(element) {
-    const rect = element.getBoundingClientRect();
-    return (
-      rect.top <= (window.innerHeight || document.documentElement.clientHeight) * 0.9
-    );
-  }
-
-  function handleScrollAnimation() {
-    const events = document.querySelectorAll('.event');
-    events.forEach(event => {
-      if (isInViewport(event)) {
-        event.classList.add('visible');
-      }
-    });
-  }
-
-  window.addEventListener('scroll', handleScrollAnimation);
-  window.addEventListener('load', handleScrollAnimation);
-</script>
-
+  <script src="acceuil.js"></script>
 </body>
 </html>
