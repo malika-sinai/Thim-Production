@@ -27,9 +27,16 @@
   <div class="slider">
     <div class="slides">
       <div class="slide active">
-        <img src="../src/Oiseau_rare_vertical.jpg" alt="Événement 2">
+        <img src="../src/oiseau_rare.jpeg" alt="Événement 1">
         <div class="slide-caption">
           <h2>L'oiseau Rare au CASINO DE PARIS le 06 Juillet 2025</h2>
+          <a href="#" class="btn-ticket">Ticket à partir de 25 €</a>
+        </div>
+      </div>
+       <div class="slide active">
+        <img src="../src/roseline.jpg" alt="Événement 2">
+        <div class="slide-caption">
+          <h2>Roseline LAYO à paris</h2>
           <a href="#" class="btn-ticket">Ticket à partir de 25 €</a>
         </div>
       </div>
@@ -43,7 +50,23 @@
     <p class="hero-subtitle">Créer des expériences inoubliables à chaque événement</p>
   </div>
 </section>
-
+<section class="events">
+  <h2>Nos Evènements</h2>
+  <div class="event-list">
+    <article class="event">
+      <img src="../src/team_paya_sold_out.jpg" alt="Flyer Évènement 1" />
+      <h3> Team PAYA </h3>
+    </article>
+    <article class="event">
+      <img src="../src/roseline_sold_out.jpg" alt="Flyer Évènement 2" />
+      <h3>Roseline LAYO </h3>
+    </article>
+    <article class="event">
+      <img src="../src/oiseau_rare.jpeg" alt="Flyer Évènement 3" />
+      <h3>l'oiseau Rare </h3>
+    </article>
+  </div>
+</section>
   <footer>
     <div class="contact-info">
       📍 Paris, France <br>
@@ -51,35 +74,6 @@
       ✉️ contact@monsite.ci
     </div>
   </footer>
-
-  <script>
-  const slidesContainer = document.querySelector('.slides');
-  const slides = document.querySelectorAll('.slide');
-  const nextBtn = document.querySelector('.next');
-  const prevBtn = document.querySelector('.prev');
-  let index = 0;
-  const totalSlides = slides.length;
-
-  function updateSlidePosition() {
-    slidesContainer.style.transform = `translateX(-${index * 100}%)`;
-  }
-
-  function showNextSlide() {
-    index = (index + 1) % totalSlides;
-    updateSlidePosition();
-  }
-
-  function showPrevSlide() {
-    index = (index - 1 + totalSlides) % totalSlides;
-    updateSlidePosition();
-  }
-
-  nextBtn.addEventListener('click', showNextSlide);
-  prevBtn.addEventListener('click', showPrevSlide);
-
-  // ⏱️ Auto défilement toutes les 5 secondes
-  setInterval(showNextSlide, 3000);
-</script>
-
+  <script src="acceuil.js"></script>
 </body>
 </html>

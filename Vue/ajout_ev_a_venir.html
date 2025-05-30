@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>ajout-event</title>
+  <link rel="stylesheet" href="ajout_ev_a_venir.css" />
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script> <!-- optionnel -->
+</head>
+<body>
+
+  <!-- Header copié depuis acceuil.html -->
+  <header>
+    <img src="../src/logo_TM.jpeg" alt="Logo de Thim Production" class="logo" />
+    <div class="burger" onclick="toggleMenu()">
+      <div></div>
+      <div></div>
+      <div></div>
+    </div>
+    <nav>
+      <ul>
+        <li><a href="acceuil.html">Accueil</a></li>
+        <li><a href="description.html">À propos</a></li>
+        <li><a href="past_event.html">Evènement</a></li>
+        <li><a href="location_sono.html">Location sono</a></li>
+        <li><a href="contact.html">Nous contacter</a></li>
+      </ul>
+    </nav>
+  </header>
+   
+<div class="form-container">
+    <h1>Ajouter un événement à venir </h1>
+    <form method="POST" enctype="multipart/form-data">
+      <label for="titre">Titre de l'événement</label>
+      <input type="text" id="titre" name="titre" required>
+
+      <label for="description">Description</label>
+      <textarea id="description" name="description" rows="4" required></textarea>
+
+      <label for="date">Date</label>
+      <input type="date" id="date" name="date" required>
+
+      <label for="lien">Lien de billetterie</label>
+      <input type="url" id="lien" name="lien" placeholder="https://..." required>
+
+      <label for="flyer">Flyer de l'événement</label>
+      <input type="file" id="flyer" name="flyer" accept="image/*" required>
+
+      <button type="button" id = "ajout">Ajouter l'événement</button>
+      <div align="center" id = "message"><p></p></div>
+    </form>
+  </div>
+  <!-- Footer copié depuis acceuil.html -->
+  <footer>
+    <div class="contact-info">
+      📍 Paris, France <br>
+      📞 +33 6 79 68 38 63 <br>
+      ✉️ contact@monsite.ci
+    </div>
+  </footer>
+  <script src="ajout_ev_a_venir.js"></script>
+</body>
+</html>
