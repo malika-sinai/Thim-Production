@@ -132,6 +132,10 @@ nav ul li a {
   padding: 40px 20px;
 }
 
+.about-container {
+  flex-direction: row-reverse;
+}
+
 .about-image {
   flex: 1;
   display: flex;
@@ -200,4 +204,16 @@ nav ul li a {
 .second-block {
     margin-top: 40px;
     gap: 30px;
+}
+
+.temoignage {
+  font-family: 'Liberation Serif', 'Times New Roman', Times, serif;
+  font-size: 1.4rem;
+  color: #444;
+  font-style: italic;
+  background: #f9f9f9;
+  border-left: 4px solid #e30613;
+  padding: 12px 24px;
+  margin: 18px 0;
+  border-radius: 8px;
 }
