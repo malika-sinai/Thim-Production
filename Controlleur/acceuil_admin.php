@@ -23,7 +23,7 @@ if (count($future_event) != 0) {
     foreach ($future_event as $value1) {
         $titre = htmlspecialchars($value1['titre']);
         $id_event = urlencode($value1['id_event']);
-        $table_future[] = "<tr><td>{$titre} <a href=\"../Controlleur/delete_event.php?id_event={$id_event}\" class=\"delete-btn\">Supprimer</a></td></tr>";
+        $table_future[] = "<tr><td>{$titre}</td></tr>";
     }
 } else {
     $table_future[] = "<tr><td>Aucun évènement à venir</td></tr>";

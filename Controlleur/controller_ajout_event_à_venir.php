@@ -6,6 +6,8 @@ $titre = $_POST['titre'];
 $description = $_POST['description'];
 $date = $_POST['date'];
 $lien = $_POST['lien'];
+$adresse = $_POST['adresse'];
+$heure = $_POST['heure'];
 
 $flyer = $_FILES['flyer'];
 
@@ -24,7 +26,8 @@ $flyer = $_FILES['flyer'];
     $uploadFile = rtrim($uploadDir, '/') . '/' . $newName;
 
     if (move_uploaded_file($tmpName, $uploadFile)) {
-        $result = ajout_future_event($titre, $description, $date, $lien, $uploadFile);
+        $flyer_url = '/THIM-PRODUCTION/uploads/image_future_ev/' . $newName;
+        $result = ajout_future_event($titre,$flyer_url, $description,$date,$heure,$adresse,$lien);
         if ($result != -1) {
             echo json_encode(["message" => "success" , "id_event" => $result]);
         } else if ($result == -1) {

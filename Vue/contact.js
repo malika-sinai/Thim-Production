@@ -31,7 +31,7 @@ export default {
 
             this.loading = true;
             try {
-                const response = await fetch('/api/contact', {
+                const response = await fetch('../Controlleur/contact.php', {
                     method: 'POST',
                     headers: {
                         'Content-Type': 'application/json'
@@ -47,6 +47,7 @@ export default {
                     throw new Error(data.message || "Erreur lors de l'envoi.");
                 }
                 this.success = true;
+                alert("Merci, votre message a bien été envoyé. Nous vous répondrons dans les plus brefs délais.");
                 this.name = '';
                 this.email = '';
                 this.message = '';
