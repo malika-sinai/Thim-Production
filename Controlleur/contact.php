@@ -7,7 +7,7 @@ $name = $data['name'] ?? '';
 $email = $data['email'] ?? '';
 $message = $data['message'] ?? '';
 
-$destinataire = "sinai.meite@gmail.com";
+$destinataire = "thimprodution22@gmail.com";
 
 if (empty($name) || empty($email) || empty($message)) {
     http_response_code(400);

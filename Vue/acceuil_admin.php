@@ -19,7 +19,7 @@
     </div>
     <nav>
       <ul>
-        <li><a href="acceuil.html">Accueil</a></li>
+        <li><a href="index.html">Accueil</a></li>
         <li><a href="description.html">À propos</a></li>
         <li><a href="past_event.html">Evènement passé</a></li>
         <li><a href="location_sono.html">Location sono</a></li>
