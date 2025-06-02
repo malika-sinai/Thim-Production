@@ -50,7 +50,7 @@
       <h2>Événements à venir</h2>
       <table id="table-future-event">
         <thead>
-          <tr><th>Titre</th><th>Action</th></tr>
+          <tr><th>Titre</th></tr>
         </thead>
         <tbody>
           <!-- Les événements à venir seront insérés ici -->

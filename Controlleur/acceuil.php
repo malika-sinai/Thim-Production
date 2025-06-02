@@ -24,7 +24,7 @@ if (count($future_event) != 0) {
         '<img src="' . $flyer. '" alt="Evenement ' . $id_event . '">' .
         '<div class="slide-caption">' .
             '<h2>' . $titre . ' le ' . $date_formatee . '</h2>' .
-            '<a href="' . $lien_billet . '" class="btn-ticket">' . $description . '</a>' .
+            '<a href="' . $lien_billet . '" class="btn-ticket"> Acheter mon ticket </a>' .
         '</div>' .
     '</div>';
     }

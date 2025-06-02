@@ -178,7 +178,7 @@ nav ul li a {
   margin-bottom: 12px;
 }
 
-@media (max-width: 900px) {
+@media (max-width: 1024px) {
   .about-container {
     flex-direction: column;
     align-items: center;
@@ -194,6 +194,16 @@ nav ul li a {
     max-width: 220px;
     margin-bottom: 20px;
   }
+
+  footer {
+    padding: 1.5rem;
+  }
+
+  footer .footer-links {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
 }
 
 .second-block .about-image .embleme {
@@ -216,5 +226,30 @@ nav ul li a {
   padding: 12px 24px;
   margin: 18px 0;
   border-radius: 8px;
+}
+
+footer {
+  background-color: white;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  font-size: 0.95rem;
+  color: #333;
+  text-align: center;
+}
+
+footer .footer-links {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1.5rem;
+}
+
+footer .contact-info {
+  margin-top: 1rem;
+  line-height: 1;
+  color: black;
 }
 
